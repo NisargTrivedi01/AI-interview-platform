@@ -103,7 +103,7 @@ export default function HomePage() {
       <footer className="border-t border-gray-800 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-400">
-            © 2025 AI InterviewPrep. Built with ❤️ for developers worldwide.
+            © 2026 AI InterviewPrep. Built with ❤️ for developers worldwide.
           </p>
         </div>
       </footer>
