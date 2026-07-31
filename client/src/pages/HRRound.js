@@ -14,7 +14,7 @@ export default function HRRound() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [submitError, setSubmitError] = useState(""); // 🆕 ADD: Submit validation error
   const navigate = useNavigate();
-  const API = "http://localhost:5000/api/interview";
+  const API = "https://ai-interview-platform-2-z5e3.onrender.com/api/interview";
 
     // 🆕 ADD RETRY FUNCTION
   const handleRetry = () => {

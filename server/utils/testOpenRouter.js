@@ -9,7 +9,7 @@ async function testOpenRouter() {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
-        "HTTP-Referer": "http://localhost:5000", // optional but recommended
+        "HTTP-Referer": "https://ai-interview-platform-2-z5e3.onrender.com", // optional but recommended
         "X-Title": "AI Interview Platform",
         "Content-Type": "application/json",
       },

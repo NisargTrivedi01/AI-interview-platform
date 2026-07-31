@@ -15,7 +15,7 @@ export default function TechnicalRound() {
   const [allQuestionsAttempted, setAllQuestionsAttempted] = useState(false);
   const navigate = useNavigate();
 
-  const API = "http://localhost:5000/api/interview";
+  const API = "https://ai-interview-platform-2-z5e3.onrender.com/api/interview";
   const roundType = "technical";
 
   // 🐛 DEBUG: Check round progression status

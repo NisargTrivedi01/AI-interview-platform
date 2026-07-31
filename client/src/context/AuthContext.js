@@ -16,7 +16,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  const API = "http://localhost:5000/api/auth";
+  const API = "https://ai-interview-platform-2-z5e3.onrender.com/api/auth";
 
   // Check if user is logged in on app start
   useEffect(() => {

@@ -21,8 +21,8 @@ export default function CodingRound() {
   const currentRound = "coding";
 
   const navigate = useNavigate();
-  const API = "http://localhost:5000/api/interview";
-  const COMPILE_API = "http://localhost:5000/api";
+  const API = "https://ai-interview-platform-2-z5e3.onrender.com/api/interview";
+  const COMPILE_API = "https://ai-interview-platform-2-z5e3.onrender.com/api";
 
   // 🐛 DEBUG: Check round progression status
   const debugRoundStatus = () => {
@@ -941,8 +941,8 @@ useEffect(() => {
 
 //   const navigate = useNavigate();
   
-//   const API = "http://localhost:5000/api/interview";
-//   const COMPILE_API = "http://localhost:5000/api";
+//   const API = "https://ai-interview-platform-2-z5e3.onrender.com/api/interview";
+//   const COMPILE_API = "https://ai-interview-platform-2-z5e3.onrender.com/api";
 
 //   // 🐛 DEBUG: Check round progression status
 // // 🐛 DEBUG: Check round progression status

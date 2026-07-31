@@ -16,7 +16,7 @@ export default function SignupPage() {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/register", {
+      const response = await axios.post("https://ai-interview-platform-2-z5e3.onrender.com/api/auth/register", {
         name,
         email,
         password,

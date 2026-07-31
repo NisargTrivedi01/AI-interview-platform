@@ -14,7 +14,7 @@ export default function AptitudeRound() {
   const [submitError, setSubmitError] = useState(""); // 🆕 ADD: Submit validation error
   const navigate = useNavigate();
 
-  const API = "http://localhost:5000/api/interview";
+  const API = "https://ai-interview-platform-2-z5e3.onrender.com/api/interview";
 
  // 🐛 DEBUG: Comprehensive round status check
 const debugRoundStatus = () => {

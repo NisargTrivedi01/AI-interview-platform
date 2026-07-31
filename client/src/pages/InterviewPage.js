@@ -9,7 +9,7 @@ export default function InterviewPage() {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const navigate = useNavigate();
-  const API = "http://localhost:5000/api";
+  const API = "https://ai-interview-platform-2-z5e3.onrender.com/api";
 
   // Data sync function
   const syncInterviewData = async () => {
@@ -18,7 +18,7 @@ export default function InterviewPage() {
     
     if (!interviewId && userId) {
       try {
-        const response = await axios.get(`http://localhost:5000/api/interview/results/user/${userId}`);
+        const response = await axios.get(`https://ai-interview-platform-2-z5e3.onrender.com/api/interview/results/user/${userId}`);
         if (response.data.success) {
           localStorage.setItem("interviewId", response.data.interview.interviewId);
           setInterviewData(response.data.interview);
@@ -43,7 +43,7 @@ export default function InterviewPage() {
       
       if (!interviewId && userId) {
         try {
-          const response = await axios.get(`http://localhost:5000/api/interview/results/user/${userId}`);
+          const response = await axios.get(`https://ai-interview-platform-2-z5e3.onrender.com/api/interview/results/user/${userId}`);
           if (response.data.success && response.data.interview) {
             localStorage.setItem("interviewId", response.data.interview.interviewId);
             setInterviewData(response.data.interview);
@@ -465,7 +465,7 @@ export default function InterviewPage() {
 //   const [loading, setLoading] = useState(true);
 //   const [refreshing, setRefreshing] = useState(false);
 //   const navigate = useNavigate();
-//   const API = "http://localhost:5000/api";
+//   const API = "https://ai-interview-platform-2-z5e3.onrender.com/api";
 
 //   // In InterviewPage.js - ADD THIS CODE after line 11 (after state declarations but before useEffects)
 
@@ -476,7 +476,7 @@ export default function InterviewPage() {
   
 //   if (!interviewId && userId) {
 //     try {
-//       const response = await axios.get(`http://localhost:5000/api/interview/results/user/${userId}`);
+//       const response = await axios.get(`https://ai-interview-platform-2-z5e3.onrender.com/api/interview/results/user/${userId}`);
 //       if (response.data.success) {
 //         localStorage.setItem("interviewId", response.data.interview.interviewId);
 //         setInterviewData(response.data.interview);
@@ -504,7 +504,7 @@ export default function InterviewPage() {
 //     if (!interviewId && userId) {
 //       // Try to find latest interview by userId
 //       try {
-//         const response = await axios.get(`http://localhost:5000/api/interview/results/user/${userId}`);
+//         const response = await axios.get(`https://ai-interview-platform-2-z5e3.onrender.com/api/interview/results/user/${userId}`);
 //         if (response.data.success && response.data.interview) {
 //           localStorage.setItem("interviewId", response.data.interview.interviewId);
 //           setInterviewData(response.data.interview);
@@ -895,7 +895,7 @@ export default function InterviewPage() {
 //   const navigate = useNavigate();
 
 //   const userId = localStorage.getItem("userId");
-//   const API_BASE = "http://localhost:5000";
+//   const API_BASE = "https://ai-interview-platform-2-z5e3.onrender.com";
 
 //   const fetchInterview = async () => {
 //     if (!userId) {
@@ -1071,7 +1071,7 @@ export default function InterviewPage() {
 //   const navigate = useNavigate();
 
 //   const userId = localStorage.getItem("userId");
-//   const API_BASE = "http://localhost:5000";
+//   const API_BASE = "https://ai-interview-platform-2-z5e3.onrender.com";
 
 //   const fetchInterview = async () => {
 //     if (!userId) {

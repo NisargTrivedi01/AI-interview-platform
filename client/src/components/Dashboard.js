@@ -62,7 +62,7 @@ export default function Dashboard() {
     
     if (!interviewId && userId) {
       try {
-        const response = await axios.get(`http://localhost:5000/api/interview/results/user/${userId}`);
+        const response = await axios.get(`https://ai-interview-platform-2-z5e3.onrender.com/api/interview/results/user/${userId}`);
         if (response.data.success) {
           localStorage.setItem("interviewId", response.data.interview.interviewId);
           setCurrentInterview(response.data.interview);
@@ -86,7 +86,7 @@ export default function Dashboard() {
 
         if (interviewId) {
           try {
-            response = await axios.get(`http://localhost:5000/api/interview/results/${interviewId}`);
+            response = await axios.get(`https://ai-interview-platform-2-z5e3.onrender.com/api/interview/results/${interviewId}`);
           } catch (interviewIdError) {
             console.warn("Fetch by interviewId failed, trying userId");
             localStorage.removeItem("interviewId");
@@ -95,7 +95,7 @@ export default function Dashboard() {
         
         if (!response && userId) {
           try {
-            response = await axios.get(`http://localhost:5000/api/interview/results/user/${userId}`);
+            response = await axios.get(`https://ai-interview-platform-2-z5e3.onrender.com/api/interview/results/user/${userId}`);
             if (response.data.success && response.data.interview) {
               localStorage.setItem("interviewId", response.data.interview.interviewId);
             }
@@ -132,7 +132,7 @@ export default function Dashboard() {
       if (!currentInterview || currentFeedback) return;
 
       try {
-        const response = await axios.get(`http://localhost:5000/api/interview/feedback?interviewId=${currentInterview.interviewId}`);
+        const response = await axios.get(`https://ai-interview-platform-2-z5e3.onrender.com/api/interview/feedback?interviewId=${currentInterview.interviewId}`);
         if (response.data.success) {
           setCurrentFeedback(response.data.feedback);
         }
@@ -249,7 +249,7 @@ export default function Dashboard() {
     
     try {
       setLoadingCurrent(true);
-      const response = await axios.post('http://localhost:5000/api/interview/generate-feedback', {
+      const response = await axios.post('https://ai-interview-platform-2-z5e3.onrender.com/api/interview/generate-feedback', {
         interviewId: currentInterview.interviewId
       }, {
         timeout: 15000
